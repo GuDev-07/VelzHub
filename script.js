@@ -76,4 +76,9 @@ navLinks.forEach(link => {
   });
 });
 
+if (window.innerWidth > 768) {
+  // aqui você mantém toda a lógica de animação
+  // ex: slide automático, setas, indicadores, etc.
+}
+
 
