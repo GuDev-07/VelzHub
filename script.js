@@ -76,9 +76,28 @@ navLinks.forEach(link => {
   });
 });
 
-if (window.innerWidth > 768) {
-  // aqui você mantém toda a lógica de animação
-  // ex: slide automático, setas, indicadores, etc.
+let touchStartX = 0;
+let touchEndX = 0;
+
+//Função que detecta o tipo do swipe = deslize
+
+function Touch(){
+ if (touchEndX < touchStartX - 50){
+    update(1); //Esquerda
+ } else if (touchEndX > touchStartX + 50){
+
+  update(-1); //Direita
+ }
 }
+if (window.innerWidth <= 768){
+  items.forEach((item) => {
+  item.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+ });
 
-
+ item.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleGesture();
+ });
+});
+}
