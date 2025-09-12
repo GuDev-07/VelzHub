@@ -43,7 +43,7 @@ function update(direction) {
 clearInterval(timer); //Limpa o timer para reiniciar a contagem
 timer = setInterval(() => {
     update(1)
-}, 10000); //Muda o slide a cada 10 segundos
+}, 30000); //Muda o slide a cada 10 segundos
 
 
 
