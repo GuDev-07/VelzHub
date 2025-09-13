@@ -51,7 +51,7 @@ header {
 
 .navbar-links li {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: 500;
   color: white;
   margin-left: 15px;
@@ -71,6 +71,10 @@ header {
 
 .navbar-links li:hover::after {
   width: 100%;
+}
+
+.navbar-links li:hover::before {
+  color: #1ecaae;
 }
 
 .navbar-links li a {
@@ -139,8 +143,15 @@ header {
 .container {
   height: 100vh;
   position: relative;
-  background: linear-gradient(135deg, #041b1c, #04322d 100%);
-  overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.979)), url('images/teste-background.png'); /* sua imagem */
+  min-height: 100vh;
+  background-color: #111;
+  background-position: top right;
+  background-size: cover;
+  background-position: 40% 0%;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
 }
 
 .container::before {
@@ -216,7 +227,7 @@ header {
 }
 
 .product-img img {
-  max-width: 90%;
+  max-width: 60%;
   max-height: 80%;
   filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
   transform: translateX(200px);
@@ -231,7 +242,7 @@ header {
 }
 
 .content {
-  width: 55%;
+  width: 60%;
   padding-right: 80px;
   display: flex;
   align-items: flex-start;
@@ -241,7 +252,7 @@ header {
 }
 
 .product-tag {
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: #ffffff;
   font-weight: 600;
@@ -259,7 +270,7 @@ header {
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: #f8f8f8c5;
   margin-bottom: 30px;
@@ -279,7 +290,7 @@ header {
   padding: 12px 10px;
   background: linear-gradient(90deg, #1ecaae, #15a087b4);
   border-radius: 30px;
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   border: none;
@@ -289,6 +300,7 @@ header {
 .btn:hover {
   background: linear-gradient(90deg, #054a3d, #046454);
   box-shadow: 0 0 10px #0464546b;
+  cursor: pointer;
 }
 
 /* ======================= */
@@ -305,8 +317,8 @@ header {
 }
 
 .arrow-btn {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer;
   background-color: rgba(4, 100, 84, 0.1);
@@ -319,7 +331,7 @@ header {
 
 .indicators {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -331,7 +343,7 @@ header {
 
 .numbers {
   font-family: "Orbitron", sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.349);
 }
@@ -342,7 +354,7 @@ header {
 }
 
 .dot {
-  width: 40px;
+  width: 30px;
   height: 4px;
   background-color: rgba(4, 100, 84, 0.2);
   border-radius: 2px;
@@ -499,7 +511,7 @@ header {
   }
 
   .item {
-    background-color: #054a3d;
+    background-color: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.979));
     width: 90%;
     max-width: 400px;
     aspect-ratio: 1 / 1;
